@@ -1,4 +1,65 @@
 ---
-layout: home
-author_profile: true
+layout: single
+title: "Antiimperialistisk Aktion"
+author_profile: false
 ---
+
+<!-- Banner -->
+<div style="background:url('/assets/images/banner.jpeg') center/cover; padding:100px; text-align:center; color:white;">
+  <h1>Wellcome to Antiimperialistisk Aktion</h1>
+</div>
+
+<!-- Intro Text -->
+<section style="text-align:center; font-size:1.2em; max-width:800px; margin:40px auto;">
+  <p>
+    We are a vibrant community of students dedicated to making a difference through academic, social, and cultural events.
+  </p>
+</section>
+
+<!-- Latest Posts -->
+<section>
+  <h2>Latest Posts</h2>
+  {% assign recent_posts = site.posts | slice: 0, 3 %}
+  {% if recent_posts.size > 0 %}
+    <ul>
+      {% for post in recent_posts %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a> - {{ post.date | date: "%B %d, %Y" }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No posts yet! Check back soon.</p>
+  {% endif %}
+</section>
+
+<!-- News & Events -->
+<section style="display:flex; flex-wrap:wrap; gap:20px; margin-top:40px;">
+  <!-- Latest News -->
+  <div style="flex:1; min-width:300px;">
+    <h2>Latest News</h2>
+    {% assign news_posts = site.categories.news | slice: 0, 3 %}
+    {% if news_posts.size > 0 %}
+      <ul>
+        {% for post in news_posts %}
+          <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No News for now!</p>
+    {% endif %}
+  </div>
+
+  <!-- Latest Events -->
+  <div style="flex:1; min-width:300px;">
+    <h2>Latest Events</h2>
+    {% assign event_posts = site.categories.events | slice: 0, 3 %}
+    {% if event_posts.size > 0 %}
+      <ul>
+        {% for post in event_posts %}
+          <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No Events for now!</p>
+    {% endif %}
+  </div>
+</section>
