@@ -1,11 +1,11 @@
 ---
-title: "Manifestation Demonsteration"
+title: "Manifestation at Stockholm University"
 date: 2025-09-08
 layout: single
 location: "Stockholm University"
 ---
 
-A manifestation demonstration in Stockholm University.
+A demonstration in Stockholm University.
 
 
 ![](/assets/images/demo.jpg)
