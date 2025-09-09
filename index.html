@@ -37,7 +37,7 @@ author_profile: false
   <!-- Latest News -->
   <div style="flex:1; min-width:300px;">
     <h2>Latest News</h2>
-    {% assign news_posts = site.categories.news | slice: 0, 3 %}
+    {% assign news_posts = site.news | sort: 'date' | reverse | slice: 0, 3 %}
     {% if news_posts.size > 0 %}
       <ul>
         {% for post in news_posts %}
@@ -52,7 +52,7 @@ author_profile: false
   <!-- Latest Events -->
   <div style="flex:1; min-width:300px;">
     <h2>Latest Events</h2>
-    {% assign event_posts = site.categories.events | slice: 0, 3 %}
+    {% assign event_posts = site.events | sort: 'date' | reverse | slice: 0, 3 %}
     {% if event_posts.size > 0 %}
       <ul>
         {% for post in event_posts %}
