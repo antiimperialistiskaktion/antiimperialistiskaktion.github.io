@@ -1,5 +1,5 @@
 ---
-title: "Debate Article"
+title: "Debate Article: \"Medskyldighet till folkmord är inte opartiskt\""
 date: 2025-08-16
 layout: single
 ---
